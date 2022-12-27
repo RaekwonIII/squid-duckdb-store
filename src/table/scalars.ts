@@ -45,7 +45,7 @@ export let IntType = new Type<number>({
 })
 
 export let UIntType = new Type<number>({
-    dbType: 'UINT',
+    dbType: 'UINTEGER',
     serialize(value: number) {
         return value
     },
@@ -102,13 +102,13 @@ export let BooleanType = new Type<boolean>({
     },
 })
 
-export let BlobType = new Type<Uint8Array, ArrayBuffer>({
-    dbType: 'BLOB',
-    serialize(value: Uint8Array) {
-        assert(value instanceof Uint8Array, 'Invalid bytes array')
-        return value.buffer
-    },
-})
+// export let BlobType = new Type<Uint8Array, string>({
+//     dbType: 'BLOB',
+//     serialize(value: Uint8Array) {
+//         assert(value instanceof Uint8Array, 'Invalid bytes array')
+//         return Buffer.from(value).toString('hex')
+//     },
+// })
 
 export let DateType = new Type<Date, string>({
     dbType: 'DATE',

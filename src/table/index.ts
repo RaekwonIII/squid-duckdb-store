@@ -58,7 +58,6 @@ export let types = {
     uBigInt: scalars.UBigIntType,
     float: scalars.FloatType,
     double: scalars.DoubleType,
-    bytes: scalars.BlobType,
     date: scalars.DateType,
     timestamp: scalars.TimestampType,
     timestampz: scalars.TimestampZType,
