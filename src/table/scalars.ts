@@ -66,7 +66,7 @@ export let UBigIntType = new Type<bigint, string>({
 })
 
 export let HugeIntType = new Type<bigint, string>({
-    dbType: 'HIGEINT',
+    dbType: 'HUGEINT',
     serialize(value: bigint) {
         return value.toString()
     },
