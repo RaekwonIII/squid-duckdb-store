@@ -125,7 +125,7 @@ export let TimestampType = new Type<Date, string>({
 })
 
 export let TimestampZType = new Type<Date, string>({
-    dbType: 'TIMESTAMPZ',
+    dbType: 'TIMESTAMP WITH TIME ZONE',
     serialize(value: Date) {
         return value.toISOString()
     },
