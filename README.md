@@ -22,6 +22,6 @@ const db = new CsvDatabase([Transfers], {
 
 processor.run(db, async (ctx) => {
     let transfersData = getTransfers(ctx)
-    ctx.store.write(Transfers, transfersData)
+    await ctx.store.write(Transfers, transfersData)
 })
 ```
